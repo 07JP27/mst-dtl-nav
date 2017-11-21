@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+mast-detail/bin
+mast-detail/obj
+Droid/bin
+Droid/obj
+iOS/bin
+iOS/obj
+UITests/bin
+UITests/obj
+packages
