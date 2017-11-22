@@ -2,6 +2,7 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:mastdetail.Views" 
+    xmlns:cont="clr-namespace:mastdetail.Controls"
     x:Class="mastdetail.Views.mast_detailPage">
 
     <!--MasterPageの設定-->
@@ -11,13 +12,12 @@
         <OnPlatform x:TypeArguments = "Thickness" iOS = "0, 20, 0, 0" />
       </ContentPage.Padding>
       <StackLayout HorizontalOptions="Center">
-        <Label Text="test"/>
-        <ListView x:Name="listView" ItemSelected="Handle_ItemSelected">
+        <ListView x:Name="listView" ItemSelected="Handle_ItemSelected" SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                  <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}" />
+                    <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}" />
                 </DataTemplate>
-          </ListView.ItemTemplate>
+            </ListView.ItemTemplate>
         </ListView>
       </StackLayout>
     </ContentPage>

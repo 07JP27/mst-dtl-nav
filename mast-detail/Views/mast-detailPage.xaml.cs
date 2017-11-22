@@ -9,7 +9,7 @@ namespace mastdetail.Views
 {
     public partial class mast_detailPage : MasterDetailPage
     {
-        public mast_detailPage(NavigationPage initPage)
+        public mast_detailPage(Type initPage)
         {
             InitializeComponent();
 
@@ -17,7 +17,9 @@ namespace mastdetail.Views
             listView.ItemsSource = MasterMenu.MasterMenuList;
 
             //初期画面を表示
-            this.Detail = initPage;
+            Page displayPage = (Page)Activator.CreateInstance(initPage);
+            var detail = new NavigationPage(displayPage);
+            this.Detail = detail;
         }
 
         private void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)

@@ -6,5 +6,6 @@
         <Button Text="View1" Clicked="View1Clicked"/>
         <Button Text="View2" Clicked="View2Clicked" />
         <Button Text="View3" Clicked="View3Clicked" />
+        <Button Text="View4" Clicked="View4Clicked" />
     </StackLayout>
 </ContentPage>

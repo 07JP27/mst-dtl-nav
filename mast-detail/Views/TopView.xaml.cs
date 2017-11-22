@@ -15,17 +15,22 @@ namespace mastdetail.Views
 
         void View1Clicked(object sender, System.EventArgs e)
         {
-            Application.Current.MainPage = new mast_detailPage(new NavigationPage(new View1()));
+            Application.Current.MainPage = new mast_detailPage(typeof(View1));
         }
 
         void View2Clicked(object sender, System.EventArgs e)
         {
-            Application.Current.MainPage = new mast_detailPage(new NavigationPage(new View2()));
+            Application.Current.MainPage = new mast_detailPage(typeof(View2));
         }
 
         void View3Clicked(object sender, System.EventArgs e)
         {
-            Application.Current.MainPage = new mast_detailPage(new NavigationPage(new View3()));
+            Application.Current.MainPage = new mast_detailPage(typeof(View3));
+        }
+
+        void View4Clicked(object sender, System.EventArgs e)
+        {
+            Application.Current.MainPage = new mast_detailPage(typeof(View4));
         }
     }
 }
