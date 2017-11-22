@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="mastdetail.Views.View4">
-    <Label Text="View4" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:cont="clr-namespace:mastdetail.Controls"
+    x:Class="mastdetail.Views.View4">
+    <Grid>
+        <StackLayout>
+            <Label Text="View4" />
+            <BoxView Color="Aqua" />
+        </StackLayout>
+        <cont:CustomIndicator VerticalOptions="FillAndExpand" />
+    </Grid>
 </ContentPage>

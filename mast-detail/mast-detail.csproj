@@ -54,6 +54,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CustomIndicatorWebView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -82,6 +90,12 @@
     <Compile Include="Constants\MasterMenu.cs" />
     <Compile Include="Views\View4.xaml.cs">
       <DependentUpon>View4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomIndicator.xaml.cs">
+      <DependentUpon>CustomIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomIndicatorWebView.xaml.cs">
+      <DependentUpon>CustomIndicatorWebView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
