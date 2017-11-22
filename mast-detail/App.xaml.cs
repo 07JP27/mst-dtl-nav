@@ -9,7 +9,7 @@ namespace mastdetail
         {
             InitializeComponent();
 
-            MainPage = new TopView();
+            MainPage = new NavigationPage(new TopView());
         }
 
         protected override void OnStart()

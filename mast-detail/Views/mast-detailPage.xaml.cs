@@ -28,7 +28,7 @@ namespace mastdetail.Views
             //HOMEなら別遷移
             if(nextView.TargetType == typeof(TopView))
             {
-                Application.Current.MainPage = new TopView();
+                Application.Current.MainPage.Navigation.PopModalAsync();
             }
 
             //選択されたページをインスタンス化してNavigationPageを作成し、画面を遷移する
