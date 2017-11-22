@@ -1,5 +1,5 @@
 ﻿using System;
-namespace mastdetail
+namespace mastdetail.Models
 {
     public class MasterItem
     {

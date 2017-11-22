@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace mastdetail
+namespace mastdetail.Views
 {
     public partial class View3_1 : ContentPage
     {

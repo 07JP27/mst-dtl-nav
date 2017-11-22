@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using mastdetail.Views;
 
 namespace mastdetail
 {

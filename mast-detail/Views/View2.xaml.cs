@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace mastdetail
+namespace mastdetail.Views
 {
-    public partial class View1 : ContentPage
+    public partial class View2 : ContentPage
     {
-        public View1()
+        public View2()
         {
             InitializeComponent();
         }

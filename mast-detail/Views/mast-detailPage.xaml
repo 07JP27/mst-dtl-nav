@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    xmlns:local="clr-namespace:mastdetail" 
-    x:Class="mastdetail.mast_detailPage">
+    xmlns:local="clr-namespace:mastdetail.Views" 
+    x:Class="mastdetail.Views.mast_detailPage">
 
     <!--MasterPageの設定-->
   <MasterDetailPage.Master>
@@ -10,8 +10,8 @@
       <ContentPage.Padding>
         <OnPlatform x:TypeArguments = "Thickness" iOS = "0, 20, 0, 0" />
       </ContentPage.Padding>
- 
       <StackLayout HorizontalOptions="Center">
+        <Label Text="test"/>
         <ListView x:Name="listView" ItemSelected="Handle_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -25,16 +25,6 @@
  
   <!--DetailPageの設定-->
   <MasterDetailPage.Detail>
-    <NavigationPage>
-      <x:Arguments>
-        <ContentPage>
-          <Label x:Name="lblColorName"
-                 HorizontalOptions="Center"
-                 VerticalOptions="Center"
-                 FontSize="20"/>
-        </ContentPage>
-      </x:Arguments>
-    </NavigationPage>
   </MasterDetailPage.Detail>
 
     
