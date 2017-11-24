@@ -13,9 +13,13 @@ namespace mastdetail.Views
             InitializeComponent();
 
             //初期画面を表示
-            Page displayPage = (Page)Activator.CreateInstance(initPage);
-            var detail = new NavigationPage(displayPage);
-            this.Detail = detail;
+            Page displayPage = Activator.CreateInstance(initPage) as Page;
+
+            if (displayPage != null)
+            {
+                var detail = new NavigationPage(displayPage);
+                this.Detail = detail;
+            }
         }
 
         void HomeTapped(object sender, System.EventArgs e)
@@ -52,12 +56,16 @@ namespace mastdetail.Views
             }
 
             //選択されたページをインスタンス化してNavigationPageを作成し、画面を遷移する
-            Page displayPage = (Page)Activator.CreateInstance(targetType);
-            var detail = new NavigationPage(displayPage);
-            this.Detail = detail;
+            Page displayPage = Activator.CreateInstance(targetType) as Page;
 
-            // Detail Pageに戻る
-            this.IsPresented = false;
+            if (displayPage != null)
+            {
+                var detail = new NavigationPage(displayPage);
+                this.Detail = detail;
+
+                // Detail Pageに戻る
+                this.IsPresented = false;
+            }
         }
     }
 }
