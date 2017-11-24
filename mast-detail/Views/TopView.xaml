@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:cont="clr-namespace:mastdetail.Controls"
     x:Class="mastdetail.Views.TopView">
 	<StackLayout>
         <Button Text="View1" Clicked="View1Clicked"/>
         <Button Text="View2" Clicked="View2Clicked" />
         <Button Text="View3" Clicked="View3Clicked" />
-        <Button Text="View4" Clicked="View4Clicked" />
+        <Button Text="View4"  />
+        <cont:ImageButton Image="icon.png" Clicked="View4Clicked"/>
     </StackLayout>
 </ContentPage>

@@ -97,6 +97,7 @@
       <DependentUpon>CustomIndicatorWebView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\MasterTableView.cs" />
+    <Compile Include="Controls\ImageButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
