@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 using mastdetail.Models;
-using mastdetail.Constants;
 
 namespace mastdetail.Views
 {
@@ -13,28 +12,47 @@ namespace mastdetail.Views
         {
             InitializeComponent();
 
-            //Masterに項目を追加
-            listView.ItemsSource = MasterMenu.MasterMenuList;
-
             //初期画面を表示
             Page displayPage = (Page)Activator.CreateInstance(initPage);
             var detail = new NavigationPage(displayPage);
             this.Detail = detail;
         }
 
-        private void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        void HomeTapped(object sender, System.EventArgs e)
         {
-            // 選択された画面を抽出
-            var nextView = MasterMenu.MasterMenuList.Where(a => a == e.SelectedItem).FirstOrDefault();
-                
+            Handle_ItemSelected(typeof(TopView));
+        }
+
+        void View1Tapped(object sender, System.EventArgs e)
+        {
+            Handle_ItemSelected(typeof(View1));
+        }
+
+        void View2Tapped(object sender, System.EventArgs e)
+        {
+            Handle_ItemSelected(typeof(View2));
+        }
+
+        void View3Tapped(object sender, System.EventArgs e)
+        {
+            Handle_ItemSelected(typeof(View3));
+        }
+
+        void View4Tapped(object sender, System.EventArgs e)
+        {
+            Handle_ItemSelected(typeof(View4));
+        }
+
+        private void Handle_ItemSelected(Type targetType)
+        {
             //HOMEなら別遷移
-            if(nextView.TargetType == typeof(TopView))
+            if(targetType == typeof(TopView))
             {
                 Application.Current.MainPage.Navigation.PopModalAsync();
             }
 
             //選択されたページをインスタンス化してNavigationPageを作成し、画面を遷移する
-            Page displayPage = (Page)Activator.CreateInstance(nextView.TargetType);
+            Page displayPage = (Page)Activator.CreateInstance(targetType);
             var detail = new NavigationPage(displayPage);
             this.Detail = detail;
 

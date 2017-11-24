@@ -87,7 +87,6 @@
       <DependentUpon>mast-detailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\MasterItem.cs" />
-    <Compile Include="Constants\MasterMenu.cs" />
     <Compile Include="Views\View4.xaml.cs">
       <DependentUpon>View4.xaml</DependentUpon>
     </Compile>
@@ -97,6 +96,7 @@
     <Compile Include="Controls\CustomIndicatorWebView.xaml.cs">
       <DependentUpon>CustomIndicatorWebView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MasterTableView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -115,7 +115,6 @@
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
-    <Folder Include="Constants\" />
     <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -125,6 +125,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="CustomIndicatorWebViewRenderer.cs" />
+    <Compile Include="MasterTableViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\icon.png" />
