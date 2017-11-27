@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
 using mastdetail.Models;
+using mastdetail.Constants;
 
 namespace mastdetail.Views
 {
@@ -11,6 +12,9 @@ namespace mastdetail.Views
         public mast_detailPage(Type initPage)
         {
             InitializeComponent();
+
+            //Masterに項目を追加
+            listView.ItemsSource = MasterMenu.MasterMenuList;
 
             //初期画面を表示
             Page displayPage = Activator.CreateInstance(initPage) as Page;
@@ -22,50 +26,24 @@ namespace mastdetail.Views
             }
         }
 
-        void HomeTapped(object sender, System.EventArgs e)
+        private void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
-            Handle_ItemSelected(typeof(TopView));
-        }
+            // 選択された画面を抽出      
+            var nextView = MasterMenu.MasterMenuList.Where(a => a == e.SelectedItem).FirstOrDefault();
 
-        void View1Tapped(object sender, System.EventArgs e)
-        {
-            Handle_ItemSelected(typeof(View1));
-        }
-
-        void View2Tapped(object sender, System.EventArgs e)
-        {
-            Handle_ItemSelected(typeof(View2));
-        }
-
-        void View3Tapped(object sender, System.EventArgs e)
-        {
-            Handle_ItemSelected(typeof(View3));
-        }
-
-        void View4Tapped(object sender, System.EventArgs e)
-        {
-            Handle_ItemSelected(typeof(View4));
-        }
-
-        private void Handle_ItemSelected(Type targetType)
-        {
             //HOMEなら別遷移
-            if(targetType == typeof(TopView))
+            if (nextView.TargetType == typeof(TopView))
             {
                 Application.Current.MainPage.Navigation.PopModalAsync();
             }
 
             //選択されたページをインスタンス化してNavigationPageを作成し、画面を遷移する
-            Page displayPage = Activator.CreateInstance(targetType) as Page;
+            Page displayPage = (Page)Activator.CreateInstance(nextView.TargetType);
+            var detail = new NavigationPage(displayPage);
+            this.Detail = detail;
 
-            if (displayPage != null)
-            {
-                var detail = new NavigationPage(displayPage);
-                this.Detail = detail;
-
-                // Detail Pageに戻る
-                this.IsPresented = false;
-            }
+            // Detail Pageに戻る
+            this.IsPresented = false;
         }
     }
 }

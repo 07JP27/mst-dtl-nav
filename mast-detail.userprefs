@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{2818FDBE-2637-48D8-A337-E238EE437720}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="mast-detail/Views/mast-detailPage.xaml">
+    <Files>
+      <File FileName="mast-detail/Views/mast-detailPage.xaml" Line="23" Column="25" />
+      <File FileName="mast-detail/Views/mast-detailPage.xaml.cs" Line="27" Column="10" />
+      <File FileName="mast-detail/Constants/MasterMenu.cs" Line="15" Column="87" />
+      <File FileName="mast-detail/Views/TopView.xaml" Line="7" Column="51" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.mast-detail.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.E66DE31C-49E5-4291-BDDC-41F4F5D42934" />
+  <MonoDevelop.Ide.ItemProperties.mast-detail.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MultiItemStartupConfigurations />
+</Properties>

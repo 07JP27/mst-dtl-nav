@@ -6,5 +6,6 @@ namespace mastdetail.Models
         public string Title { get; set; }
         public string IconSource { get; set; }
         public Type TargetType { get; set; }
+        public bool IsLineVisible { get; set; }
     }
 }

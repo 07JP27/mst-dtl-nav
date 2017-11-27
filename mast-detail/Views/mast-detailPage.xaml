@@ -12,20 +12,29 @@
         <OnPlatform x:TypeArguments = "Thickness" iOS = "0, 20, 0, 0" />
       </ContentPage.Padding>
       <StackLayout HorizontalOptions="Center">
-           <cont:MasterTableView Intent="Menu" HasUnevenRows="True" BackgroundColor="Blue" >
-            <cont:MasterTableView.Root>
-              <TableRoot>
-                <TableSection>
-                  <ImageCell Text="Home" ImageSource="icon.png"  Tapped="HomeTapped"/>
-                  <ImageCell Text="View1" ImageSource="icon.png" Tapped="View1Tapped"/>
-                  <ImageCell Text="View2" ImageSource="icon.png" Tapped="View2Tapped"/>
-                  <ViewCell><BoxView Color="White" HeightRequest="0.5"/></ViewCell>
-                  <ImageCell Text="View3" ImageSource="icon.png" Tapped="View3Tapped"/>
-                  <ImageCell Text="View4" ImageSource="icon.png" Tapped="View4Tapped"/>
-                </TableSection>
-              </TableRoot>
-            </cont:MasterTableView.Root>
-          </cont:MasterTableView>
+        <ListView x:Name="listView" ItemSelected="Handle_ItemSelected" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="1" />
+                            </Grid.RowDefinitions>
+                            <Grid Margin="0,0,0,-5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="{Binding IconSource}" VerticalOptions="CenterAndExpand" />
+                                <Label Grid.Column="1" Text="{Binding Title}" VerticalOptions="CenterAndExpand" />
+                            </Grid>
+                        <BoxView Grid.Row="1" Color="Green" HeightRequest="1" IsVisible="{Binding IsLineVisible}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
       </StackLayout>
     </ContentPage>
   </MasterDetailPage.Master>
