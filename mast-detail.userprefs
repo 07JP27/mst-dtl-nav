@@ -1,20 +1,12 @@
-﻿<Properties StartupConfiguration="{3BA3473B-B6E2-4FA7-8258-F81E4FEEC353}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/Properties/AndroidManifest.xml">
+﻿<Properties StartupConfiguration="{2818FDBE-2637-48D8-A337-E238EE437720}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="mast-detail/Views/View3_1.xaml.cs">
     <Files>
-      <File FileName="mast-detail/Views/mast-detailPage.xaml" Line="48" Column="1" />
-      <File FileName="mast-detail/Views/mast-detailPage.xaml.cs" Line="27" Column="10" />
-      <File FileName="mast-detail/Views/TopView.xaml" Line="14" Column="1" />
-      <File FileName="mast-detail/Views/View3.xaml" Line="7" Column="1" />
-      <File FileName="mast-detail/Views/View2.xaml" Line="9" Column="29" />
-      <File FileName="mast-detail/Views/View2.xaml.cs" Line="16" Column="85" />
-      <File FileName="iOS/AssemblyService.cs" Line="27" Column="78" />
-      <File FileName="mast-detail/Interfaces/IAssemblyService.cs" Line="7" Column="24" />
-      <File FileName="Droid/AssemblyService.cs" Line="31" Column="38" />
-      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="Droid/CustomIndicatorWebViewRenderer.cs" Line="1" Column="1" />
-      <File FileName="Droid/MasterTableViewRenderer.cs" Line="1" Column="1" />
-      <File FileName="Droid/packages.config" Line="1" Column="1" />
-      <File FileName="Droid/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="mast-detail/Views/View3.xaml.cs" Line="37" Column="14" />
+      <File FileName="mast-detail/Services/WebService.cs" Line="29" Column="1" />
+      <File FileName="mast-detail/Views/View3.xaml" Line="16" Column="82" />
+      <File FileName="mast-detail/Views/View4.xaml" Line="6" Column="5" />
+      <File FileName="mast-detail/Views/View3_1.xaml" Line="7" Column="1" />
+      <File FileName="mast-detail/Views/View3_1.xaml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
