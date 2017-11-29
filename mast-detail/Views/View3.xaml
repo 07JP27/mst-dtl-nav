@@ -5,7 +5,7 @@
     x:Class="mastdetail.Views.View3">
     <Grid>
         <StackLayout>
-            <ListView x:Name="list" ItemSelected="Handle_ItemSelected">
+            <ListView x:Name="list" ItemSelected="Handle_ItemSelected" IsPullToRefreshEnabled="true" Refreshing="PullRefreshing">
             <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding LocationName}" Detail="{Binding FacilityPlace}" />

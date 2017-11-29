@@ -15,7 +15,19 @@ namespace mastdetail.Views
         public View3()
         {
             InitializeComponent();
-            GetData(new WebService());
+            Initial();
+        }
+
+        async void Initial()
+        {
+            await GetData(new WebService());
+        }
+
+        async void PullRefreshing(object sender, System.EventArgs e)
+        {
+            indicator.IsVisible = true;
+            await GetData(new WebService());
+            list.EndRefresh();
         }
 
         void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
@@ -25,13 +37,13 @@ namespace mastdetail.Views
         }
 
         // 非同期でデータ取得のメソッドを実行するメソッド
-        async void GetData(WebService webDS)
+        async Task GetData(WebService webDS)
         {
             ObservableCollection<AEDModel> AEDlist;
             try
             {
                 // 取得したデータをListに設定
-                AEDlist = await webDS.AsyncGetWebAPIData();
+                AEDlist = await webDS.GetAEDDataAsync();
                 this.list.ItemsSource = AEDlist;
                 this.indicator.IsVisible = false;
             }
